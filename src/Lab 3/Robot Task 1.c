@@ -1,5 +1,6 @@
 #include "ATMEGA2560.h"
 
+// Im not sure why this one is a default Robot.c
 int main(void) {
 	
 	DDRA = 0xFF;

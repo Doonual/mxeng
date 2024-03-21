@@ -1,8 +1,8 @@
-#include "ATMEGA2560.h"
+#include "ATMEGA2560.h"	// Gives us access to the functions of the ATMEGA2560
 
-int axisPin = 0;
+int axisPin = 0;	// Which of the joystick axes are we currently showing
 
-bool prevButtonState;
+bool prevButtonState;	//
 bool buttonState;
 
 int main(void) {

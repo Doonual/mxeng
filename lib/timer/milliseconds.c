@@ -15,7 +15,7 @@ void milliseconds_init(void)
 {
 	TCCR5A = 0; //no pin outputs required
 	TCCR5B = (1<<WGM52); //CTC mode
-	TCNT5 = 0; //reset timer
+	TCNT5 = 0; //reset timer to 0
 	OCR5A = 15999; //generate an interrupt once per millisecond
 	TIMSK5 |= (1<<OCIE5A); //Output Compare Interrupt Enable 1 A
 	TCCR5B |= (1<<CS50); //set prescaler to 1, starting timer

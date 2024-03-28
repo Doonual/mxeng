@@ -31,7 +31,7 @@ int main(void) {
 	TCNT1 = 0; //reset timer to 0
 	
 	TIMSK1 |= (1<<OCIE1A); //Output Compare Interrupt Enable 1 A
-	TCCR1B |= (1<<CS10); //set prescaler to 1024, starting timer
+	TCCR1B |= (1<<CS10); //set prescaler to 1, starting timer
 	
 	OCR1A = 15999; //generate an interrupt once per millisecond
 	sei(); // enable global interrupts
@@ -81,4 +81,4 @@ void Reset() {
 ISR(TIMER1_COMPA_vect) {
 	if (freeze == false) {return;}
 	ms++;
-}	
+}
